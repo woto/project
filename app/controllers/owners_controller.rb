@@ -25,6 +25,9 @@ class OwnersController < ApplicationController
   # GET /owners/new.json
   def new
     @owner = Owner.new
+    2.times do
+      @owner.tasks.build
+    end
 
     respond_to do |format|
       format.html # new.html.erb
